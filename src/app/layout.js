@@ -1,9 +1,12 @@
 import { Poppins, Epilogue } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import { ThemeProvider } from "@/components/Theme-provider";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  variable: '--font-poppins'
 });
 const epilogue = Epilogue({
   subsets: ["latin"],
@@ -21,8 +24,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} ${epilogue.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${poppins.variable} ${epilogue.variable} bg-black`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        ></ThemeProvider>
+        <Header />
         {children}
       </body>
     </html>
