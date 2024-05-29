@@ -16,15 +16,11 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-screen  md:px-3 ">
+    <header className="w-screen  md:px-3  ">
       <nav className="just flex items-center justify-between lg:justify-around">
         {/* Logo */}
         <Link href={"/"} className="relative size-20 max-[320px]:size-14">
-          <Image src="/logo.png"
-            fill
-            alt="Logo"
-            priority
-          />
+          <Image src="/logo.png" fill alt="Logo" priority />
         </Link>
 
         {/* Mobile Nav */}
@@ -37,7 +33,7 @@ const Header = () => {
           {navLinks.map((link, index) => (
             <Link href={link.Link} key={index}>
               <li
-                className={`${activePage === link.Link ? "text-brianGreen line-through" : ""} font-poppins transition-colors hover:text-brianGreen `}
+                className={`${activePage === link.Link ? "text-brianGreen line-through" : ""} font-poppins transition-colors hover:text-brianGreen hover:line-through`}
               >
                 {link.Title}
               </li>
@@ -46,7 +42,7 @@ const Header = () => {
         </ul>
 
         {/* Button */}
-        <Button className="hidden rounded-full bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-brianGreen/90 lg:block">
+        <Button className="hidden rounded-full bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-transparent hover:text-brianGreen border border-brianGreen lg:block">
           Contact Me
         </Button>
       </nav>
