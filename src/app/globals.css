@@ -74,3 +74,16 @@
       @apply bg-background text-foreground;
     }
   }
+
+  *::selection {
+    background-color: #A8FE39;
+    color: #000000;
+  }
+
+  .bg-gradient {
+    background-color: #000000d6;
+      background-image: -webkit-radial-gradient(circle, #a8fe39 0%, #000000 100%);
+      background-image: radial-gradient(circle, #a8fe39 0%, #000000 100%);
+      background-blend-mode: multiply;
+      background-repeat: no-repeat;
+  }

@@ -16,20 +16,24 @@ const Header = () => {
   ];
 
   return (
-    <header className="md:px-3">
-      <nav className="flex items-center justify-between lg:justify-around just">
+    <header className="w-screen  md:px-3 ">
+      <nav className="just flex items-center justify-between lg:justify-around">
         {/* Logo */}
-        <Link href={"/"}>
-          <Image src="/logo.png" width={70} height={70} alt="Logo" priority/>
+        <Link href={"/"} className="relative size-20 max-[320px]:size-14">
+          <Image src="/logo.png"
+            fill
+            alt="Logo"
+            priority
+          />
         </Link>
 
         {/* Mobile Nav */}
         <span className="block lg:hidden">
-          <Sidebar links={navLinks}  />
+          <Sidebar links={navLinks} />
         </span>
-        
+
         {/* Navlinks */}
-        <ul className="lg:flex items-center justify-center gap-10 hidden ">
+        <ul className="hidden items-center justify-center gap-10 lg:flex ">
           {navLinks.map((link, index) => (
             <Link href={link.Link} key={index}>
               <li
@@ -42,7 +46,7 @@ const Header = () => {
         </ul>
 
         {/* Button */}
-        <Button className="rounded-full bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-brianGreen/90 hidden lg:block">
+        <Button className="hidden rounded-full bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-brianGreen/90 lg:block">
           Contact Me
         </Button>
       </nav>

@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/Theme-provider";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: '--font-poppins'
+  variable: "--font-poppins",
 });
 const epilogue = Epilogue({
   subsets: ["latin"],
@@ -25,15 +25,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} ${epilogue.variable} bg-black`}>
+      <body className={`${poppins.variable} ${epilogue.variable} bg-gradient h-dvh w-dvw overflow-clip flex flex-col`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-        ></ThemeProvider>
-        <Header />
-        {children}
+        >
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -14,11 +14,10 @@ const Sidebar = ({ links }) => {
   return (
       <section className="w-[80%]" >
       <Sheet className="">
-        <SheetTrigger className="text-white">
+        <SheetTrigger className="text-white relative max-[320px]:size-16 size-20">
           <Image
             src="/menu.svg"
-            width={80}
-            height={50}
+            fill
             className="text-brianGreen"
             alt="Sidebar toggler"
           />
