@@ -1,6 +1,7 @@
-'use client'
+"use client";
 import {
-Sheet,
+  Sheet,
+  SheetClose,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
@@ -9,12 +10,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Sidebar = ({ links }) => {
-    const activeLink = usePathname();
+  const activeLink = usePathname();
 
   return (
-      <section className="w-[80%]" >
+    <section className="w-[80%]">
       <Sheet className="">
-        <SheetTrigger className="text-white relative max-[320px]:size-16 size-20">
+        <SheetTrigger className="relative size-20 text-white max-[320px]:size-16">
           <Image
             src="/menu.svg"
             fill
@@ -26,19 +27,20 @@ const Sidebar = ({ links }) => {
           <ul className="flex w-full flex-col items-center justify-start gap-6 md:gap-10">
             {links.map((link, id) => (
               <Link href={link.Link} className="w-full" key={id}>
-                <li
-                  className={`${activeLink === link.Link ? "text-brianGreen underline underline-offset-4" : ""} text-bold text-balance font-poppins text-3xl md:text-4xl uppercase transition-all hover:text-brianGreen hover:underline font-semibold w-100 text-end`}
-                >
-                  {link.Title}
-                </li>
+                <SheetClose>
+                  <li
+                    className={`${activeLink === link.Link ? "text-brianGreen underline underline-offset-4" : ""} text-bold w-100 text-balance text-end font-poppins text-3xl font-semibold uppercase transition-all hover:text-brianGreen hover:underline md:text-4xl`}
+                  >
+                    {link.Title}
+                  </li>
+                </SheetClose>
               </Link>
             ))}
           </ul>
         </SheetContent>
       </Sheet>
-      </section>
-      
-    );
+    </section>
+  );
 };
 
 export default Sidebar;
