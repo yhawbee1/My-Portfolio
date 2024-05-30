@@ -1,5 +1,5 @@
 "use client";
-// components/MouseFollower.js
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { throttle } from "lodash";
@@ -18,11 +18,11 @@ const MouseTracking = () => {
   };
 
   useEffect(() => {
-      window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-        window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
@@ -31,19 +31,17 @@ const MouseTracking = () => {
     isMouseInside && (
       <motion.div
         animate={{
-          x: mousePosition.x,
-          y: mousePosition.y,
+          x: mousePosition.x - 25,
+          y: mousePosition.y - 25,
         }}
         transition={{
           type: "spring",
           stiffness: 500,
           damping: 30,
         }}
-        className="pointer-events-none fixed left-0 top-0 z-[1000] grid size-12 place-content-center rounded-full border border-brianGreen bg-transparent mix-blend-difference"
+        className="pointer-events-none hidden  fixed left-0 top-0 z-[1000] md:grid size-12 place-content-center rounded-full border border-brianGreen bg-transparent mix-blend-difference"
       >
-        <motion.div
-          className="relative size-3 rounded-full bg-brianGreen mix-blend-difference"
-        ></motion.div>
+        <motion.div className="relative size-3 rounded-full bg-brianGreen mix-blend-difference"></motion.div>
       </motion.div>
     )
   );
