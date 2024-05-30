@@ -5,7 +5,7 @@ const TransitionEffect = () => {
   return (
     <>
       <motion.div
-        className="fixed bottom-0 top-0 right-full z-30 h-screen w-screen bg-black"
+        className="fixed grid place-content-center bottom-0 top-0 right-full z-30 h-screen w-screen bg-black"
         initial={{
           x: "100%",
           width: "100%",
@@ -18,7 +18,18 @@ const TransitionEffect = () => {
           duration: 0.6,
           ease: "easeInOut",
         }}
-      />
+      >
+        <motion.div id="shapes" className=""
+          initial={{
+            opacity: 1
+          }}
+          animate={{
+            opacity: 0
+          }}
+        >
+          
+        </motion.div>
+      </motion.div>
       <motion.div
         className="fixed bottom-0 top-0 right-full z-20 h-screen w-screen bg-brianGreen"
         initial={{
