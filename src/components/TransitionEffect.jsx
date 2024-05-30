@@ -26,6 +26,10 @@ const TransitionEffect = () => {
           animate={{
             opacity: 0
           }}
+          transition={{
+            delay: 0.5,
+            ease: "easeInOut"
+          }}
         >
           
         </motion.div>
