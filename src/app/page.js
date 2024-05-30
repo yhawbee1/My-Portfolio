@@ -1,10 +1,12 @@
+import MouseTracking from "@/components/MouseTracking";
 import TransitionEffect from "@/components/TransitionEffect";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <>
-     <TransitionEffect  />
+      <TransitionEffect />
+      <MouseTracking  />
       <section className="mx-auto flex h-full w-[90%] items-center justify-center xl:w-[80%] min-[1537px]:w-[75%]">
       <span className="space-y-2 2xl:space-y-3 min-[1537px]:space-y-7">
         <h3 className=" font-poppins text-brianGreen max-[320px]:text-[14px] md:text-xl ">
