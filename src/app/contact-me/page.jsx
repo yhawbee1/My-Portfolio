@@ -3,6 +3,9 @@
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader } from "lucide-react";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 export default function Contact() {
   const [error, setError] = useState(null);
@@ -59,8 +62,14 @@ export default function Contact() {
     <section className="flex flex-col h-full items-center justify-center px-3 md:px-5">
       <div className="text-start">
         <div className="mb-6">
-          <h1 className="font-epilogue lg:text-[96px] lg:leading-[75px] text-[45px] md:text-[65px] font-bold w-full">Contact <span className="text-brianGreen">Me.</span></h1>  
-          <p className="font-poppins">Got a project or question? Reach out, and I&apos;ll get back to you soon.</p>
+          <h1 className="font-epilogue lg:text-[96px] lg:leading-[75px] text-[50px] md:text-[65px] font-bold w-full">Contact <span className="text-brianGreen">Me.</span></h1>  
+          <p className="font-poppins ps-1">Got a project or question? Reach out, and I&apos;ll get back to you soon.</p>
+          <div className="flex gap-3 ps-1 mt-3 text-2xl">
+            <a href="#" className="font-poppins font-medium underline"><FaGithub /></a>
+            <a href="#" className="font-poppins font-medium underline"><FaLinkedin /></a>
+            <a href="#" className="font-poppins font-medium underline"><FaXTwitter /></a>
+            <a href="#" className="font-poppins font-medium underline"><FaInstagram /></a>
+          </div>
         </div>
         
       <form ref={formRef} onSubmit={handleSubmit}>
@@ -68,26 +77,26 @@ export default function Contact() {
           <input
             type="text"
             placeholder="Name"
-            className="bg-black w-full rounded-full border  py-5 ps-4 pe-2 font-epilogue backdrop-blur-md placeholder:text-white"
+            className="bg-black/10 w-full rounded-full border border-white focus:outline-0 focus:border-brianGreen py-5 ps-4 pe-2 placeholder:text-white font-epilogue backdrop-blur-md  placeholder:font-poppins md:placeholder:text-lg md:text-lg "
             name="name"
             required
           />
           <input
             type="email"
-            className="w-full rounded-full border py-5 ps-4 pe-2 placeholder:text-white"
+            className="w-full rounded-full border border-white focus:outline-0 focus:border-brianGreen py-5 ps-4 pe-2 placeholder:text-white font-epilogue bg-black/10 backdrop-blur-md  placeholder:font-poppins md:placeholder:text-lg md:text-lg "
             placeholder="Email"
             name="email"
             required
           />
           <textarea
-            className="w-full rounded-3xl border py-5 ps-4 pe-2 placeholder:text-white h-[150px] md:h-"
+            className="w-full rounded-3xl border border-white focus:outline-0 focus:border-brianGreen py-5 ps-4 pe-2 placeholder:text-white h-[150px] font-epilogue bg-black/10 backdrop-blur-md placeholder:font-poppins md:placeholder:text-lg md:text-lg "
         
             placeholder="Message"
             name="message"
             required
           ></textarea>
           <Button
-            className="h-[50px] w-full rounded-full border border-brianGreen bg-brianGreen font-poppins text-black hover:bg-transparent hover:text-brianGreen max-[320px]:h-fit md:h-[60px] md:w-[250px] 2xl:text-xl"
+            className="h-[50px] w-full rounded-full border  border-brianGreen bg-brianGreen font-poppins text-black hover:bg-transparent hover:text-brianGreen max-[320px]:h-fit md:h-[60px] md:w-[250px] 2xl:text-xl"
             type="submit"
             disabled={isLoading}
           >
