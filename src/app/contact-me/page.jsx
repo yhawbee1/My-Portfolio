@@ -1,10 +1,11 @@
-
 "use client";
 import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader } from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import TransitionEffect from "@/components/TransitionEffect";
+import MouseTracking from "@/components/MouseTracking";
 
 
 export default function Contact() {
@@ -59,19 +60,21 @@ export default function Contact() {
   }
 
   return (
+    <>
+    <TransitionEffect />
+    <MouseTracking />
     <section className="flex flex-col h-full items-center justify-center px-3 md:px-5">
       <div className="text-start">
-        <div className="mb-6">
-          <h1 className="font-epilogue lg:text-[96px] lg:leading-[75px] text-[50px] md:text-[65px] font-bold w-full">Contact <span className="text-brianGreen">Me.</span></h1>  
+        <div className="mb-6 space-y-2">
+          <h1 className="font-epilogue lg:text-[96px] leading-[50px] lg:leading-[75px] text-[50px] md:text-[65px] font-bold w-full">Contact <span className="text-brianGreen">Me.</span></h1>  
           <p className="font-poppins ps-1">Got a project or question? Reach out, and I&apos;ll get back to you soon.</p>
-          <div className="flex gap-3 ps-1 mt-3 text-2xl">
-            <a href="#" className="font-poppins font-medium underline"><FaGithub /></a>
-            <a href="#" className="font-poppins font-medium underline"><FaLinkedin /></a>
-            <a href="#" className="font-poppins font-medium underline"><FaXTwitter /></a>
-            <a href="#" className="font-poppins font-medium underline"><FaInstagram /></a>
+          <div className="flex gap-3 ps-1 mt-3 text-xl md:text-2xl">
+            <a href="#" className="hover:text-brianGreen"><FaGithub /></a>
+            <a href="#" className="hover:text-brianGreen"><FaLinkedin /></a>
+            <a href="#" className="hover:text-brianGreen"><FaXTwitter /></a>
+            <a href="#" className="hover:text-brianGreen"><FaInstagram /></a>
           </div>
         </div>
-        
       <form ref={formRef} onSubmit={handleSubmit}>
         <div className="md:space-y-4 space-y-3">
           <input
@@ -109,5 +112,6 @@ export default function Contact() {
       </form>
     </div>
     </section>
+    </>
   );
 }
