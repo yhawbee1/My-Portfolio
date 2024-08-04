@@ -69,10 +69,10 @@ export default function Contact() {
           <h1 className="font-epilogue lg:text-[96px] leading-[50px] lg:leading-[75px] text-[50px] md:text-[65px] font-bold w-full">Contact <span className="text-brianGreen">Me.</span></h1>  
           <p className="font-poppins ps-1">Got a project or question? Reach out, and I&apos;ll get back to you soon.</p>
           <div className="flex gap-3 ps-1 mt-3 text-xl md:text-2xl">
-            <a href="#" className="hover:text-brianGreen"><FaGithub /></a>
-            <a href="#" className="hover:text-brianGreen"><FaLinkedin /></a>
-            <a href="#" className="hover:text-brianGreen"><FaXTwitter /></a>
-            <a href="#" className="hover:text-brianGreen"><FaInstagram /></a>
+            <a href="https://github.com/yhawbee1" className="hover:text-brianGreen"><FaGithub /></a>
+            <a href="https://www.linkedin.com/in/brian-antwi-a7a136264" className="hover:text-brianGreen"><FaLinkedin /></a>
+            <a href="https://x.com/BrianAntwi23?t=mEdh1IedSFx2GRGo2FEpVA&s=09" className="hover:text-brianGreen"><FaXTwitter /></a>
+            <a href="https://www.instagram.com/khelly_spikes?igsh=b2dxODI2MGpwOHhl" className="hover:text-brianGreen"><FaInstagram /></a>
           </div>
         </div>
       <form ref={formRef} onSubmit={handleSubmit}>
