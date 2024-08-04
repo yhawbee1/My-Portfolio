@@ -130,8 +130,8 @@ export default function Contact() {
                   "Send Message"
                 )}
               </Button>
-              {success && <p className="text-green-500">{success}</p>}
-              {error && <p className="text-red-500">{error}</p>}
+              {success && <p className="text-green-500 font-poppins">{success}</p>}
+              {error && <p className="text-red-500 font-poppins">{error}</p>}
             </div>
           </form>
         </div>
