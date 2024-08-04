@@ -54,7 +54,7 @@ export default function Contact() {
       setError("Oops! Something went wrong. Please try again later.");
       setSuccess(null); // Clear any previous success messages
     }
-  }
+  } 
   useEffect(() => {
     let timer;
     if (success) {
