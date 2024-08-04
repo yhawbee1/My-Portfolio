@@ -12,7 +12,7 @@ export default function Home() {
 
       <section className="mx-auto flex h-full w-[90%] items-center justify-center xl:w-[80%] min-[1537px]:w-[75%]">
         <span className="space-y-2 2xl:space-y-3 min-[1537px]:space-y-7">
-          <div className="absolute -right-10 md:hidden">
+          <div className="absolute -right-10 lg:hidden">
             <CircularText />
           </div>
           <h3 className=" cursor-default font-poppins text-brianGreen max-[320px]:text-[14px] md:text-xl">
@@ -31,7 +31,7 @@ export default function Home() {
               Contact Me
             </Button>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <CircularText />
             </div>
             
