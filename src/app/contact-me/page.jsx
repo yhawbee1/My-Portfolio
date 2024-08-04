@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader } from "lucide-react";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
@@ -55,6 +55,25 @@ export default function Contact() {
       setSuccess(null); // Clear any previous success messages
     }
   }
+  useEffect(() => {
+    let timer;
+    if (success) {
+      timer = setTimeout(() => {
+        setSuccess("");
+      }, 3000); // 3000 milliseconds = 3 seconds
+    }
+    return () => clearTimeout(timer);
+  }, [success]);
+
+  useEffect(() => {
+    let timer;
+    if (error) {
+      timer = setTimeout(() => {
+        setError("");
+      }, 3000); // 3000 milliseconds = 3 seconds
+    }
+    return () => clearTimeout(timer);
+  }, [error]);
 
   return (
     <>
@@ -130,8 +149,10 @@ export default function Contact() {
                   "Send Message"
                 )}
               </Button>
-              {success && <p className="text-green-500 font-poppins">{success}</p>}
-              {error && <p className="text-red-500 font-poppins">{error}</p>}
+              {success && (
+                <p className="font-poppins text-green-500">{success}</p>
+              )}
+              {error && <p className="font-poppins text-red-500">{error}</p>}
             </div>
           </form>
         </div>
