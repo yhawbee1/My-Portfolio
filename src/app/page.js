@@ -29,16 +29,15 @@ export default function Home() {
 
           <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between md:gap-10">
             <Link download href="/files/Brianantwi.pdf">
-            <Button className="h-[50px] rounded-full border border-brianGreen bg-transparent font-poppins text-brianGreen hover:bg-brianGreen hover:text-black max-[320px]:h-fit md:h-[70px] md:w-[250px] 2xl:text-xl">
-              Download Résumé
-            </Button>
-
+              <Button className="h-[50px] rounded-full border border-brianGreen bg-transparent font-poppins text-brianGreen hover:bg-brianGreen hover:text-black max-[320px]:h-fit md:h-[70px] md:w-[250px] 2xl:text-xl">
+                Download Résumé
+              </Button>
             </Link>
 
             <div className="hidden lg:block">
               <CircularText />
             </div>
-           
+
             <p className="mb-2 w-full cursor-default font-poppins text-base max-[320px]:mb-1 max-[320px]:text-[14px] md:w-[65%] xl:w-[45%] 2xl:w-[50%] min-[1537px]:w-[45%]">
               Passionate junior Frontend developer dedicated to crafting
               immersive digital experiences. With two years of hands-on
