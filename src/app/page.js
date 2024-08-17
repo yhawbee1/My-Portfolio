@@ -30,7 +30,7 @@ export default function Home() {
           <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between md:gap-10">
             <Link className="" download href="/files/Brianantwi.pdf">
               <Button className="h-[50px] rounded-full border border-brianGreen bg-transparent font-poppins text-brianGreen hover:bg-brianGreen hover:text-black max-[320px]:h-fit md:h-[70px] w-full md:w-[250px] 2xl:text-xl">
-                Download My Résumé
+                Download Résumé
               </Button>
             </Link>
 
