@@ -1,9 +1,9 @@
-'use client'
-import Image from 'next/image'
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Button } from './ui/button'
-import Sidebar from './Sidebar';
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   const activePage = usePathname();
@@ -16,7 +16,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="w-screen  md:px-3  ">
+    <header className="w-screen md:px-3">
       <nav className="just flex items-center justify-between lg:justify-around">
         {/* Logo */}
         <Link href={"/"} className="relative size-20 max-[320px]:size-14">
@@ -28,7 +28,7 @@ const Header = () => {
           <Sidebar links={navLinks} />
         </span>
 
-        {/* Navlinks */}
+        {/* Navigation links */}
         <ul className="hidden items-center justify-center gap-10 lg:flex ">
           {navLinks.map((link, index) => (
             <Link href={link.Link} key={index}>
@@ -42,12 +42,12 @@ const Header = () => {
         </ul>
 
         {/* Button */}
-        <Button className="hidden rounded-full bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-transparent hover:text-brianGreen border border-brianGreen lg:block">
+        <Button className="hidden rounded-full border border-brianGreen bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-transparent hover:text-brianGreen lg:block">
           Contact Me
         </Button>
       </nav>
     </header>
   );
-}
+};
 
-export default Header
+export default Header;

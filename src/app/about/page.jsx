@@ -6,12 +6,12 @@ import React from "react";
 
 const page = () => {
   return (
-    <section className="mx-auto flex flex-col-reverse md:flex-row h-full w-[90%] items-center justify-between xl:w-[80%] min-[1537px]:w-[75%]">
+    <section className=" mx-auto flex h-full top-48 w-[95%]  flex-col-reverse items-center justify-between overflow-y-auto md:flex-row xl:w-[80%] min-[1537px]:w-[75%]">
       <TransitionEffect />
       <MouseTracking />
       {/* Text */}
       <section className="lg:w-[45%]">
-        <h1 className="font-epilogue uppercase text-[39px] md:text-[110px] leading-4 md:leading-none font-bold text-white ">
+        <h1 className="font-epilogue text-[39px] font-bold uppercase leading-8 text-white md:text-[110px] md:leading-none ">
           About <span className="text-brianGreen">Me.</span>{" "}
         </h1>
         <p className="font-poppins">
@@ -27,10 +27,16 @@ const page = () => {
       </section>
 
       {/* Image */}
-      <section className=" w-[50%] flex justify-center ">
-        <div className="relative h-[250px] w-[250px] md:w-[600px] md:h-[600px] ">
-          <Image src="/portrait.jpg" fill className="rounded-full object-cover" alt="" />
-          <div className="absolute right-0 md:right-10 bottom-0 ">
+      <section className="top-28 mb-8 flex justify-center pt-10 md:w-[50%]">
+        <div className="relative h-[300px] w-[330px] md:h-[600px] md:w-[600px] ">
+          <Image
+            src="/brian.jpeg"
+            quality={90}
+            fill
+            className="md:rounded-full object-cover"
+            alt=""
+          />
+          <div className="absolute bottom-0 right-0 md:right-10 ">
             <CircularText />
           </div>
         </div>
