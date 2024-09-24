@@ -12,7 +12,7 @@ const Header = () => {
     { Title: "About Me", Link: "/about" },
     { Title: "My Skills", Link: "/skills" },
     { Title: "My Projects", Link: "/projects" },
-    { Title: "Contact Me", Link: "/contact" },
+    { Title: "Contact Me", Link: "/contact-me" },
   ];
 
   return (
