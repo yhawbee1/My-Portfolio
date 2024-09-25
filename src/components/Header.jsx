@@ -1,11 +1,9 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import Sidebar from './Sidebar'
 
 const Header = () => {
-  const activePage = usePathname()
   const navLinks = [
     { Title: 'Home', Link: '/' },
     { Title: 'About Me', Link: '/' },
