@@ -1,84 +1,84 @@
-"use client";
-import { useState, useRef, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Loader } from "lucide-react";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import TransitionEffect from "@/components/TransitionEffect";
-import MouseTracking from "@/components/MouseTracking";
+'use client'
+import { useState, useRef, useEffect } from 'react'
+import { Button } from '@/components/ui/button'
+import { Loader } from 'lucide-react'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
+import TransitionEffect from '@/components/TransitionEffect'
+import MouseTracking from '@/components/MouseTracking'
 
 export default function Contact() {
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const formRef = useRef(null);
+  const [error, setError] = useState(null)
+  const [success, setSuccess] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const formRef = useRef(null)
 
   async function handleSubmit(event) {
-    event.preventDefault();
+    event.preventDefault()
 
-    const formData = new FormData(event.target);
-    formData.append("access_key", "c197cf33-1230-406f-acf4-eb7c97b8ecfb");
+    const formData = new FormData(event.target)
+    formData.append('access_key', 'c197cf33-1230-406f-acf4-eb7c97b8ecfb')
 
-    const object = Object.fromEntries(formData);
-    const json = JSON.stringify(object);
-    setIsLoading(true);
+    const object = Object.fromEntries(formData)
+    const json = JSON.stringify(object)
+    setIsLoading(true)
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
         },
         body: json,
-      });
+      })
 
-      const result = await response.json();
+      const result = await response.json()
 
       if (response.ok) {
-        setSuccess("Your message has been sent successfully!🎉");
-        setError(null); // Clear any previous error messages
+        setSuccess('Your message has been sent successfully!🎉')
+        setError(null) // Clear any previous error messages
         if (formRef.current) {
-          formRef.current.reset(); // Reset the form fields
+          formRef.current.reset() // Reset the form fields
         }
-        setIsLoading(false);
+        setIsLoading(false)
       } else {
         setError(
-          "We encountered an issue while processing your request. Please try again.",
-        );
-        setSuccess(null); // Clear any previous success messages
-        setIsLoading(false);
+          'We encountered an issue while processing your request. Please try again.',
+        )
+        setSuccess(null) // Clear any previous success messages
+        setIsLoading(false)
       }
     } catch (error) {
-      console.error("Network error:", error);
-      setError("Oops! Something went wrong. Please try again later.");
-      setSuccess(null); // Clear any previous success messages
+      console.error('Network error:', error)
+      setError('Oops! Something went wrong. Please try again later.')
+      setSuccess(null) // Clear any previous success messages
     }
-  } 
+  }
   useEffect(() => {
-    let timer;
+    let timer
     if (success) {
       timer = setTimeout(() => {
-        setSuccess("");
-      }, 3000); // 3000 milliseconds = 3 seconds
+        setSuccess('')
+      }, 3000) // 3000 milliseconds = 3 seconds
     }
-    return () => clearTimeout(timer);
-  }, [success]);
+    return () => clearTimeout(timer)
+  }, [success])
 
   useEffect(() => {
-    let timer;
+    let timer
     if (error) {
       timer = setTimeout(() => {
-        setError("");
-      }, 3000); // 3000 milliseconds = 3 seconds
+        setError('')
+      }, 3000) // 3000 milliseconds = 3 seconds
     }
-    return () => clearTimeout(timer);
-  }, [error]);
+    return () => clearTimeout(timer)
+  }, [error])
 
   return (
     <>
-      <TransitionEffect />
-      <MouseTracking />
+      {/* <TransitionEffect />
+      <MouseTracking /> */}
       <section className="flex h-full flex-col items-center justify-center px-3 md:px-5">
         <div className="text-start">
           <div className="mb-6 space-y-2">
@@ -146,7 +146,7 @@ export default function Contact() {
                 {isLoading ? (
                   <Loader className="animate-spin" />
                 ) : (
-                  "Send Message"
+                  'Send Message'
                 )}
               </Button>
               {success && (
@@ -158,5 +158,5 @@ export default function Contact() {
         </div>
       </section>
     </>
-  );
+  )
 }

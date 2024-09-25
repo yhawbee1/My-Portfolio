@@ -1,25 +1,24 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Button } from "./ui/button";
-import Sidebar from "./Sidebar";
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import Sidebar from './Sidebar'
 
 const Header = () => {
-  const activePage = usePathname();
+  const activePage = usePathname()
   const navLinks = [
-    { Title: "Home", Link: "/" },
-    { Title: "About Me", Link: "/about" },
-    { Title: "My Skills", Link: "/skills" },
-    { Title: "My Projects", Link: "/projects" },
-    { Title: "Contact Me", Link: "/contact-me" },
-  ];
+    { Title: 'Home', Link: '/' },
+    { Title: 'About Me', Link: '/' },
+    { Title: 'My Skills', Link: '/' },
+    { Title: 'My Projects', Link: '/' },
+    { Title: 'Contact Me', Link: '/' },
+  ]
 
   return (
-    <header className="w-screen md:px-3">
-      <nav className="just flex items-center justify-between lg:justify-around">
+    <header className="sticky top-0 z-50 w-full bg-black/40 py-2 backdrop-blur-md">
+      <nav className="just flex w-full items-center justify-between lg:justify-around">
         {/* Logo */}
-        <Link href={"/"} className="relative size-20 max-[320px]:size-14">
+        <Link href={'/'} className="relative size-20 max-[320px]:size-14">
           <Image src="/logo.png" fill alt="Logo" priority />
         </Link>
 
@@ -33,7 +32,7 @@ const Header = () => {
           {navLinks.map((link, index) => (
             <Link href={link.Link} key={index}>
               <li
-                className={`${activePage === link.Link ? "text-brianGreen line-through" : ""} font-poppins transition-colors hover:text-brianGreen hover:line-through`}
+                className={`font-poppins transition-colors hover:text-brianGreen hover:line-through`}
               >
                 {link.Title}
               </li>
@@ -42,12 +41,15 @@ const Header = () => {
         </ul>
 
         {/* Button */}
-        <Button className="hidden rounded-full border border-brianGreen bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-transparent hover:text-brianGreen lg:block">
+        <Link
+          href="/"
+          className="hidden rounded-full border border-brianGreen bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-transparent hover:text-brianGreen lg:block"
+        >
           Contact Me
-        </Button>
+        </Link>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

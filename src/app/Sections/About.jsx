@@ -4,11 +4,11 @@ import TransitionEffect from "@/components/TransitionEffect";
 import Image from "next/image";
 import React from "react";
 
-const page = () => {
+const About = () => {
   return (
     <section className=" mx-auto flex h-full top-48 w-[95%]  flex-col-reverse items-center justify-between overflow-y-auto md:flex-row xl:w-[80%] min-[1537px]:w-[75%]">
-      <TransitionEffect />
-      <MouseTracking />
+      {/* <TransitionEffect />
+      <MouseTracking /> */}
       {/* Text */}
       <section className="lg:w-[45%]">
         <h1 className="font-epilogue text-[39px] font-bold uppercase leading-8 text-white md:text-[110px] md:leading-none ">
@@ -45,4 +45,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default About;
