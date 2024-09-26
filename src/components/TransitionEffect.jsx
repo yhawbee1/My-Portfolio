@@ -5,7 +5,7 @@ const TransitionEffect = () => {
   return (
     <>
       <motion.div
-        className="fixed grid place-content-center bottom-0 top-0 right-full z-30 h-screen w-screen bg-black"
+        className="fixed grid place-content-center bottom-0 top-0 right-full z-[70] h-screen w-screen bg-black"
         initial={{
           x: "100%",
           width: "100%",
@@ -33,9 +33,10 @@ const TransitionEffect = () => {
         >
           
         </motion.div>
+        
       </motion.div>
       <motion.div
-        className="fixed bottom-0 top-0 right-full z-20 h-screen w-screen bg-brianGreen"
+        className="fixed bottom-0 top-0 right-full z-[60] h-screen w-screen bg-brianGreen"
         initial={{
           x: "100%",
           width: "100%",
@@ -51,7 +52,7 @@ const TransitionEffect = () => {
         }}
       />
       <motion.div
-        className="fixed bottom-0 top-0 right-full z-10 h-screen w-screen bg-black"
+        className="fixed bottom-0 top-0 right-full z-[50] h-screen w-screen bg-black"
         initial={{
           x: "100%",
           width: "100%",

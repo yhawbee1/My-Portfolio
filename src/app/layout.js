@@ -2,6 +2,7 @@ import { Poppins, Epilogue } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { ThemeProvider } from "@/components/Theme-provider";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,10 +33,11 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
+        <TransitionEffect />
           <Header />
           {children}
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
