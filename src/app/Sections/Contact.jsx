@@ -79,11 +79,11 @@ export default function Contact() {
     <>
       {/* <TransitionEffect />
       <MouseTracking /> */}
-      <section className="flex h-full flex-col items-center justify-center px-3 md:px-5">
-        <div className="text-start">
-          <div className="mb-6 space-y-2">
+      <section className="flex h-[100vh] flex-col items-center justify-center px-3 md:px-5">
+        <div className="rounded-3xl bg-brianGreen px-10 py-16 text-start text-black">
+          <div className="mb-6 space-y-3">
             <h1 className="w-full font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] lg:text-[96px] lg:leading-[75px]">
-              Contact <span className="text-brianGreen">Me.</span>
+              Contact Me.
             </h1>
             <p className="ps-1 font-poppins">
               Got a project or question? Reach out, and I&apos;ll get back to
@@ -121,25 +121,25 @@ export default function Contact() {
               <input
                 type="text"
                 placeholder="Name"
-                className="w-full rounded-full border border-white bg-black/10 py-5 pe-2 ps-4 font-epilogue backdrop-blur-md placeholder:font-poppins placeholder:text-white focus:border-brianGreen  focus:outline-0 md:text-lg md:placeholder:text-lg "
+                className="w-full rounded-full border border-black bg-black/10 py-5 pe-2 ps-4 font-epilogue backdrop-blur-md placeholder:font-poppins placeholder:text-black focus:border-brianGreen  focus:outline-0 md:text-lg md:placeholder:text-lg "
                 name="name"
                 required
               />
               <input
                 type="email"
-                className="w-full rounded-full border border-white bg-black/10 py-5 pe-2 ps-4 font-epilogue backdrop-blur-md placeholder:font-poppins placeholder:text-white focus:border-brianGreen  focus:outline-0 md:text-lg md:placeholder:text-lg "
+                className="w-full rounded-full border border-black bg-black/10 py-5 pe-2 ps-4 font-epilogue backdrop-blur-md placeholder:font-poppins placeholder:text-black focus:border-brianGreen  focus:outline-0 md:text-lg md:placeholder:text-lg "
                 placeholder="Email"
                 name="email"
                 required
               />
               <textarea
-                className="h-[150px] w-full rounded-3xl border border-white bg-black/10 py-5 pe-2 ps-4 font-epilogue backdrop-blur-md placeholder:font-poppins placeholder:text-white focus:border-brianGreen focus:outline-0 md:text-lg md:placeholder:text-lg "
+                className="h-[150px] w-full rounded-3xl border border-black bg-black/10 py-5 pe-2 ps-4 font-epilogue backdrop-blur-md placeholder:font-poppins placeholder:text-black focus:border-brianGreen focus:outline-0 md:text-lg md:placeholder:text-lg "
                 placeholder="Message"
                 name="message"
                 required
               ></textarea>
               <Button
-                className="h-[50px] w-full rounded-full border  border-brianGreen bg-brianGreen font-poppins text-black hover:bg-transparent hover:text-brianGreen max-[320px]:h-fit md:h-[60px] md:w-[250px] 2xl:text-xl"
+                className="h-[50px] w-full rounded-full border border-black bg-black font-poppins text-brianGreen hover:bg-brianGreen transition-colors hover:text-black max-[320px]:h-fit md:h-[60px] md:w-[250px] 2xl:text-xl"
                 type="submit"
                 disabled={isLoading}
               >
