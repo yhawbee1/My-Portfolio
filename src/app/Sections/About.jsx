@@ -1,18 +1,15 @@
-import CircularText from "@/components/CircularText";
-import MouseTracking from "@/components/MouseTracking";
-import TransitionEffect from "@/components/TransitionEffect";
-import Image from "next/image";
-import React from "react";
+import CircularText from '@/components/CircularText'
+import MouseTracking from '@/components/MouseTracking'
+import TransitionEffect from '@/components/TransitionEffect'
+import Image from 'next/image'
+import React from 'react'
 
 const About = () => {
   return (
-    <section className=" mx-auto flex h-full top-48 w-[95%]  flex-col-reverse items-center justify-between overflow-y-auto md:flex-row xl:w-[80%] min-[1537px]:w-[75%]">
-      {/* <TransitionEffect />
-      <MouseTracking /> */}
-      {/* Text */}
+    <section className="container mx-auto flex min-h-[100vh] flex-col-reverse items-center justify-between overflow-y-auto py-16 md:flex-row xl:w-[80%] min-[1537px]:w-[75%]">
       <section className="lg:w-[45%]">
-        <h1 className="font-epilogue text-[39px] font-bold uppercase leading-8 text-white md:text-[110px] md:leading-none ">
-          About <span className="text-brianGreen">Me.</span>{" "}
+        <h1 className="font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] lg:text-[96px] lg:leading-[85px]">
+          About <span className="text-brianGreen">Me.</span>{' '}
         </h1>
         <p className="font-poppins">
           I&apos;m a passionate front-end developer with 2 years of experience
@@ -24,6 +21,13 @@ const About = () => {
           Figma, I collaborate seamlessly with design teams to ensure smooth
           transitions from concept to implementation.
         </p>
+        {/* <div className="flex">
+          <div className="bg-brianGreen rounded-2xl p-3">
+            <p className="font-poppins text-[90px]">
+              20<sup className="text-black">+</sup>
+            </p>
+          </div>
+        </div> */}
       </section>
 
       {/* Image */}
@@ -33,7 +37,7 @@ const About = () => {
             src="/brian.jpeg"
             quality={90}
             fill
-            className="md:rounded-full object-cover"
+            className="object-cover md:rounded-full"
             alt=""
           />
           <div className="absolute bottom-0 right-0 md:right-10 ">
@@ -42,7 +46,7 @@ const About = () => {
         </div>
       </section>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About
