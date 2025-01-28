@@ -1,12 +1,10 @@
 import CircularText from '@/components/CircularText'
-import MouseTracking from '@/components/MouseTracking'
-import TransitionEffect from '@/components/TransitionEffect'
 import Image from 'next/image'
 import React from 'react'
 
 const About = () => {
   return (
-    <section className="container mx-auto flex min-h-[100vh] flex-col-reverse items-center justify-between overflow-y-auto py-16 md:flex-row xl:w-[80%] min-[1537px]:w-[75%]">
+    <section id='about' className="container mx-auto flex min-h-[100vh] flex-col-reverse items-center justify-between overflow-y-auto py-16 md:flex-row ">
       <section className="lg:w-[45%]">
         <h1 className="font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] lg:text-[96px] lg:leading-[85px]">
           About <span className="text-brianGreen">Me.</span>{' '}

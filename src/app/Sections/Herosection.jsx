@@ -1,6 +1,4 @@
 import CircularText from '@/components/CircularText'
-import MouseTracking from '@/components/MouseTracking'
-import TransitionEffect from '@/components/TransitionEffect'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
@@ -9,8 +7,8 @@ import AnimatedGridPattern from '@/components/magicui/animated-grid-pattern'
 export default function HeroSection() {
   return (
     <>
-      <section className=" relative h-[90vh] w-full overflow-x-hidden">
-        <section className="mx-auto flex h-[90vh] w-[90%] items-center justify-center xl:w-[80%] min-[1537px]:w-[75%]">
+      <section className=" relative h-[90vh] 2xl:h-[100dvh] w-full overflow-x-hidden">
+        <section className="mx-auto flex h-[90vh] 2xl:h-[100dvh] w-[90%] items-center justify-center xl:w-[80%] min-[1537px]:w-[75%]">
           <span className="space-y-2 2xl:space-y-3 min-[1537px]:space-y-7">
             <div className="absolute -right-10 lg:hidden">
               <CircularText />
@@ -48,7 +46,7 @@ export default function HeroSection() {
         </section>
         <AnimatedGridPattern
           numSquares={30}
-          maxOpacity={0.1}
+          maxOpacity={0.2}
           duration={3}
           repeatDelay={1}
           className={cn(

@@ -5,11 +5,11 @@ import Sidebar from './Sidebar'
 
 const Header = () => {
   const navLinks = [
-    { Title: 'Home', Link: '/' },
-    { Title: 'About Me', Link: '/' },
-    { Title: 'My Skills', Link: '/' },
+    { Title: 'Home', Link: '#home' },
+    { Title: 'About Me', Link: '#about' },
+    { Title: 'My Skills', Link: '#skills' },
     { Title: 'My Projects', Link: '/' },
-    { Title: 'Contact Me', Link: '/' },
+    { Title: 'Contact Me', Link: '#contact' },
   ]
 
   return (
@@ -40,7 +40,7 @@ const Header = () => {
 
         {/* Button */}
         <Link
-          href="/"
+          href="#contact"
           className="hidden rounded-full border border-brianGreen bg-brianGreen px-6 py-2 font-poppins text-black transition-colors hover:bg-transparent hover:text-brianGreen lg:block"
         >
           Contact Me
