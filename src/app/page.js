@@ -11,7 +11,7 @@ import Projects from "./Sections/Projects";
 
 export default function Home() {
   return (
-    <main id="home" className="min-h-screen">
+    <main id="home">
       {/* Effects */}
       <TransitionEffect />
       <MouseTracking />

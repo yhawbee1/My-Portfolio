@@ -7,18 +7,18 @@ import AnimatedGridPattern from '@/components/magicui/animated-grid-pattern'
 export default function HeroSection() {
   return (
     <>
-      <section className=" relative h-[90vh] 2xl:h-[100dvh] w-full overflow-x-hidden">
-        <section className="mx-auto flex h-[90vh] 2xl:h-[100dvh] w-[90%] items-center justify-center xl:w-[80%] min-[1537px]:w-[75%]">
+      <section className=" relative h-screen w-full 2xl:h-[100dvh]">
+        <section className="mx-auto flex h-[90vh] w-[90%] items-center justify-center xl:w-[80%] 2xl:h-[100dvh] ">
           <span className="space-y-2 2xl:space-y-3 min-[1537px]:space-y-7">
             <div className="absolute -right-10 lg:hidden">
               <CircularText />
             </div>
-            <h3 className=" cursor-default font-poppins text-brianGreen max-[320px]:text-[14px] md:text-xl">
+            <h3 className="cursor-default font-poppins text-brianGreen max-[320px]:text-[14px] md:text-xl">
               👋 Hello,{' '}
               <span className="font-poppins text-white">I&apos;m Brian</span>!
             </h3>
 
-            <h1 className="cursor-default font-epilogue text-[40px] font-bold uppercase leading-[50px] max-[360px]:text-[32px] max-[360px]:leading-[40px] max-[320px]:text-[25px] max-[320px]:leading-[30px] md:text-[80px] md:leading-[80px] 2xl:text-[96px]  2xl:leading-[100px] min-[1537px]:text-[120px] min-[1537px]:leading-[110px] ">
+            <h1 className="cursor-default font-epilogue text-[40px] font-bold uppercase leading-[50px] max-[360px]:text-[32px] max-[360px]:leading-[40px] max-[320px]:text-[25px] max-[320px]:leading-[30px] md:text-[80px] md:leading-[80px] 2xl:text-[96px]  2xl:leading-[100px] min-[1537px]:text-[120px] ">
               Crafting captivating, intuitive{' '}
               <span className="text-brianGreen">interfaces</span> for delightful
               user experiences<span className="text-brianGreen">.</span>
@@ -36,10 +36,10 @@ export default function HeroSection() {
               </div>
 
               <p className="mb-2 w-full cursor-default font-poppins text-base md:w-[65%] xl:w-[45%] 2xl:w-[50%] min-[1537px]:w-[45%]">
-                Passionate Frontend developer dedicated to crafting
-                immersive digital experiences. With two years of hands-on
-                expertise, I specialize in delivering innovative solutions.
-                Let&apos;s collaborate on something extraordinary!
+                Passionate Frontend developer dedicated to crafting immersive
+                digital experiences. With two years of hands-on expertise, I
+                specialize in delivering innovative solutions. Let&apos;s
+                collaborate on something extraordinary!
               </p>
             </div>
           </span>

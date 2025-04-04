@@ -6,8 +6,6 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
 import { useToast } from '@/hooks/use-toast'
 
-
-
 export default function Contact() {
   const [error, setError] = useState(null)
   const [success, setSuccess] = useState(null)
@@ -71,7 +69,7 @@ export default function Contact() {
         description: 'Something went wrong. Please try again.',
       })
     }
-  }, [success, error]) 
+  }, [success, error])
 
   // useEffect(() => {
   //   let timer
@@ -97,7 +95,10 @@ export default function Contact() {
 
   return (
     <>
-      <section id="contact" className="flex h-[100vh] flex-col items-center justify-center px-3 md:px-5">
+      <section
+        id="contact"
+        className="flex h-[100vh] flex-col items-center justify-center px-3 md:px-5"
+      >
         <div className="rounded-3xl bg-brianGreen px-10 py-16 text-start text-black">
           <div className="mb-6 space-y-3">
             <h1 className="w-full font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] lg:text-[96px] lg:leading-[75px]">
@@ -157,7 +158,7 @@ export default function Contact() {
                 required
               ></textarea>
               <Button
-                className="h-[50px] w-full rounded-full border border-black bg-black font-poppins text-brianGreen transition-colors duration-300 hover:bg-brianGreen hover:text-black max-[320px]:h-fit md:h-[60px] md:w-[250px] 2xl:text-xl"
+                className="h-[50px] w-full rounded-full border border-black bg-brianGreen font-poppins text-black transition-colors duration-300 hover:bg-black hover:text-brianGreen max-[320px]:h-fit md:h-[60px] md:w-[250px] 2xl:text-xl"
                 type="submit"
                 disabled={isLoading}
               >
