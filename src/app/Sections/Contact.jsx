@@ -109,28 +109,16 @@ export default function Contact() {
               you soon.
             </p>
             <div className="mt-3 flex gap-3 ps-1 text-xl md:text-2xl">
-              <a
-                href="https://github.com/yhawbee1"
-                className="hover:text-brianGreen"
-              >
+              <a href="https://github.com/yhawbee1">
                 <FaGithub />
               </a>
-              <a
-                href="https://www.linkedin.com/in/brian-antwi-a7a136264"
-                className="hover:text-brianGreen"
-              >
+              <a href="https://www.linkedin.com/in/brian-antwi-a7a136264">
                 <FaLinkedin />
               </a>
-              <a
-                href="https://x.com/BrianAntwi23?t=mEdh1IedSFx2GRGo2FEpVA&s=09"
-                className="hover:text-brianGreen"
-              >
+              <a href="https://x.com/BrianAntwi23?t=mEdh1IedSFx2GRGo2FEpVA&s=09">
                 <FaXTwitter />
               </a>
-              <a
-                href="https://www.instagram.com/khelly_spikes?igsh=b2dxODI2MGpwOHhl"
-                className="hover:text-brianGreen"
-              >
+              <a href="https://www.instagram.com/khelly_spikes?igsh=b2dxODI2MGpwOHhl">
                 <FaInstagram />
               </a>
             </div>

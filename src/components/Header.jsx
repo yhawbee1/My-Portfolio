@@ -13,7 +13,7 @@ const Header = () => {
   ]
 
   return (
-    <header className="sticky top-[9px] z-[500] flex justify-center">
+    <header className="sticky top-[9px] z-[50] flex justify-center">
       <section className="absolute top-2  w-fit rounded-full border border-brianGreen/20 bg-black/40 px-10 py-3.5 backdrop-blur-md">
         <nav className="flex w-full items-center justify-between lg:justify-around">
           {/* Logo */}
