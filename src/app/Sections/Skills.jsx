@@ -2,7 +2,7 @@ import SkillsSlider from '@/components/SkillsSlider'
 
 const Skills = () => {
   return (
-    <section id='skills' className="flex min-h-screen flex-col border-y items-center justify-center space-y-6 py-16">
+    <section id='skills' className="flex min-h-screen flex-col border-y items-center justify-center space-y-5 py-16">
       <div className="container mx-auto space-y-3">
         <h2 className="font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] md:leading-[65px]">
           <span className=" text-brianGreen">My</span> Skills.

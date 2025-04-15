@@ -45,26 +45,13 @@ const Projects = () => {
       <section className="container flex flex-col items-center justify-center">
         <div className="w-full">
           <h2 className="font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] md:leading-[65px]">
-            My Projects
+            Selected Projects
           </h2>
           {/* <p className='font-poppins'>Projects That Define My Growth as a Developer</p> */}
         </div>
         <div className="mt-4 grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <a key={index} target='_blank' href={project.link}>
-              <article
-                className={`relative grid h-[300px] w-full place-items-end overflow-hidden rounded-xl border border-gray-700 bg-[url('/${project.image}')] bg-cover`}
-              >
-                <div className="z-10 mx-auto mb-3 w-[90%] rounded-md border border-gray-200/60 bg-black/30 p-2 font-poppins backdrop-blur-md">
-                  <h3 className="text-xl">{project.name}</h3>
-                </div>
-                <img
-                  className="absolute h-full w-full object-cover"
-                  src={project.image}
-                  alt=""
-                />
-              </article>
-            </a>
+            <Card key={index} project={project} />
           ))}
         </div>
       </section>
@@ -73,3 +60,23 @@ const Projects = () => {
 }
 
 export default Projects
+
+
+const Card = ({ project }) => {
+  return (
+    <a target="_blank" href={project.link}>
+      <article
+        className={`relative grid h-[300px] w-full place-items-end overflow-hidden rounded-md border border-gray-700 bg-[url('/${project.image}')] bg-cover`}
+      >
+        <img
+          className="absolute h-full w-full object-cover"
+          src={project.image}
+          alt=""
+        />
+      </article>
+        <div className="z-10 mb-3 rounded-md p-2 font-poppins">
+          <h3 className="text-xl 2xl:text-2xl">{project.name}</h3>
+        </div>
+    </a>
+  )
+}

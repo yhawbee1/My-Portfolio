@@ -7,7 +7,7 @@ import AnimatedGridPattern from '@/components/magicui/animated-grid-pattern'
 export default function HeroSection() {
   return (
     <>
-      <section className=" relative h-screen w-full 2xl:h-[100dvh]">
+      <section className="border-b relative h-screen w-full 2xl:h-[100dvh]">
         <section className="mx-auto flex h-[90vh] w-[90%] items-center justify-center xl:w-[80%] 2xl:h-[100dvh] ">
           <span className="space-y-2 2xl:space-y-3 min-[1537px]:space-y-7">
             <div className="absolute -right-10 lg:hidden">
