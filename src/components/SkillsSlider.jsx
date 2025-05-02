@@ -24,9 +24,9 @@ const secondRow = data.slice(data.length / 2);
 
 const Card = ({ name, icon }) => {
   return (
-    <div className="flex w-[280px] h-fit flex-col items-center space-y-4 rounded-3xl border bg-white/5 py-14 backdrop-blur-lg transition-all border-brianGreen/40">
-      <Image src={icon} className="size-20" width={80} height={80} alt={name} />
-      <h3 className="font-poppins text-2xl">{name}</h3>
+    <div className="flex w-[200px] lg:w-[280px] h-fit flex-col items-center space-y-4 rounded-3xl border bg-white/5 py-10 lg:py-14 backdrop-blur-lg transition-all border-brianGreen/40">
+      <Image src={icon} className="size-16 lg:size-20" width={80} height={80} alt={name} />
+      <h3 className="font-poppins text-lg lg:text-2xl">{name}</h3>
       {/* <p className="font-poppins text-lg">50%</p> */}
     </div>
   )

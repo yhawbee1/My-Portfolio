@@ -7,7 +7,7 @@ const Skills = () => {
         <h2 className="font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] md:leading-[65px]">
           <span className=" text-brianGreen">My</span> Skills.
         </h2>
-        <p className="w-[60%] font-poppins  text-lg">
+        <p className="w-full lg:w-[60%] font-poppins  text-lg">
           As a frontend developer with a passion for crafting seamless user
           experiences, I combine creativity with technical proficiency. Below
           are the tools and technologies I use to turn ideas into impactful web

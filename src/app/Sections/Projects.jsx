@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Projects = () => {
@@ -6,37 +7,37 @@ const Projects = () => {
       name: 'Only Used Tesla',
       description: '',
       link: 'https://onlyusedtesla.com/',
-      image: 'OnlyUsedTesla.png',
+      image: '/OnlyUsedTesla.png',
     },
     {
       name: 'Only Used Tesla Price Tracker',
       description: '',
       link: 'https://tracker.onlyusedtesla.com/',
-      image: 'Tesla-Price-Tracker.png',
+      image: '/Tesla-Price-Tracker.png',
     },
     {
       name: 'Streetfleet Transportation Limited',
       description: '',
       link: 'https://www.streetfleetgh.net/',
-      image: 'StreetFleet.png',
+      image: '/StreetFleet.png',
     },
     {
       name: 'Power2Know Financial Coaching',
       description: '',
       link: 'https://www.power2know.co.uk/',
-      image: 'P2k.jpg',
+      image: '/P2k.jpg',
     },
     {
       name: 'IPicturize Real Estate Photography',
       description: '',
       link: 'https://ipicturize.net/',
-      image: 'geodesign.jpg',
+      image: '/geodesign.jpg',
     },
     {
       name: 'Hostaff Healthcare Services LTD',
       description: '',
       link: 'https://geobiltengineeringconsult.com/',
-      image: 'Hostaff.jpg',
+      image: '/Hostaff.jpg',
     },
   ]
 
@@ -66,12 +67,15 @@ const Card = ({ project }) => {
   return (
     <a target="_blank" href={project.link}>
       <article
-        className={`relative grid h-[300px] w-full place-items-end overflow-hidden rounded-md border border-gray-700 bg-[url('/${project.image}')] bg-cover`}
+        className={`relative grid h-[250px] lg:h-[300px] w-full place-items-end overflow-hidden rounded-md border border-gray-700 bg-[url('/${project.image}')] bg-cover`}
       >
-        <img
+        <Image
           className="absolute h-full w-full object-cover"
           src={project.image}
           alt={`${project.name} project`}
+          fill
+          priority
+          quality={90}
         />
       </article>
         <div className="z-10 mb-3 rounded-md p-2 font-poppins">
