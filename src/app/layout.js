@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <TransitionEffect />
+          {/* <TransitionEffect /> */}
           <Header />
           {children}
         </ThemeProvider>

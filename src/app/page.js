@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main id="home">
       {/* Effects */}
-      <TransitionEffect />
+      {/* <TransitionEffect /> */}
       <MouseTracking />
       <HeroSection />
       <About />

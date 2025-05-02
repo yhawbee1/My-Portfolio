@@ -14,10 +14,10 @@ const calculateExperience = (startYear, startMonth) => {
 }
 
 const About = () => {
-  const yearsOfExperience = calculateExperience(2023, 1);
-  const numberOfProjects = 10;
-  const numberOfClients = 20;
-  const numberOfTechStacks = 8;
+  const yearsOfExperience = calculateExperience(2023, 1)
+  const numberOfProjects = 10
+  const numberOfClients = 20
+  const numberOfHours = 15
 
   return (
     <section
@@ -25,8 +25,8 @@ const About = () => {
       className="container mx-auto flex min-h-[85vh] flex-col items-center justify-evenly overflow-y-auto py-10 xl:py-16"
     >
       <section className="flex flex-col-reverse items-center justify-between md:flex-row">
-        <section className="lg:w-[50%]">
-          <h1 className="font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] lg:text-[96px] lg:leading-[85px]">
+        <section className="w-full lg:w-[50%]">
+          <h1 className="font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] md:leading-[65px] lg:text-[80px] lg:leading-[80px]">
             About <span className="text-brianGreen">Me.</span>{' '}
           </h1>
           <p className="font-poppins">
@@ -39,38 +39,13 @@ const About = () => {
             Proficient in Figma, I collaborate seamlessly with design teams to
             ensure smooth transitions from concept to implementation.
           </p>
-          <button className="mt-2 rounded-full border border-brianGreen bg-transparent px-7 py-2 font-poppins text-brianGreen hover:bg-brianGreen hover:text-black">
+          <button className="mt-3 rounded-full border border-brianGreen bg-transparent px-7 py-2 font-poppins text-brianGreen hover:bg-brianGreen hover:text-black">
             Contact Me
           </button>
         </section>
 
-        {/* Image */}
-        <section className="flex justify-end lg:w-[40%]">
-          <div className="relative h-full w-full">
-            <div className="flex gap-1">
-              <Image
-                src="/brian.jpeg"
-                width={400}
-                height={400}
-                quality={90}
-                priority={true}
-                className="h-[400px] w-[50%] rounded object-cover"
-                alt="My Image"
-              />
-              <Image
-                src="/brian.jpeg"
-                width={400}
-                height={400}
-                quality={90}
-                priority={true}
-                className="h-[400px] w-[50%] rounded object-cover"
-                alt="My Image"
-              />
-            </div>
-            <div className="absolute bottom-0 right-0 md:right-10 ">
-              <CircularText />
-            </div>
-          </div>
+        <section className="relative w-full lg:w-[50%]">
+          <img src="/developer.svg" alt="A gif of developer working" />
         </section>
       </section>
 
@@ -78,28 +53,29 @@ const About = () => {
         <div className="py-3.5 text-center">
           <h5 className="font-epilogue text-6xl font-bold">
             {}
-            <CountUp end={numberOfProjects} />
+            <CountUp end={numberOfProjects} />+
           </h5>
           <p className="font-poppins text-gray-300">Projects</p>
         </div>
         <div className="py-3.5 text-center">
           <h5 className="font-epilogue text-6xl font-bold">
-            <CountUp end={yearsOfExperience} />
+            <CountUp end={yearsOfExperience} />+
             {/* {yearsOfExperience} */}
           </h5>
           <p className="font-poppins text-gray-300">Years Of Experience</p>
         </div>
         <div className="py-3.5 text-center">
           <h5 className="font-epilogue text-6xl font-bold">
-            <CountUp end={numberOfClients} />
+            <CountUp end={numberOfClients} />+
           </h5>
           <p className="font-poppins text-gray-300">Clients</p>
         </div>
         <div className="py-3.5 text-center">
           <h5 className="font-epilogue text-6xl font-bold">
-            <CountUp end={numberOfTechStacks} />
+            <CountUp end={numberOfHours} />
+            k+
           </h5>
-          <p className="font-poppins text-gray-300">Tech Stacks</p>
+          <p className="font-poppins text-gray-300">Working Hours</p>
         </div>
       </section>
     </section>

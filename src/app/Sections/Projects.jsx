@@ -45,7 +45,7 @@ const Projects = () => {
       <section className="container flex flex-col items-center justify-center">
         <div className="w-full">
           <h2 className="font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] md:leading-[65px]">
-            Selected Projects
+            Selected <span className='text-brianGreen'>Projects.</span>
           </h2>
           {/* <p className='font-poppins'>Projects That Define My Growth as a Developer</p> */}
         </div>
@@ -71,11 +71,11 @@ const Card = ({ project }) => {
         <img
           className="absolute h-full w-full object-cover"
           src={project.image}
-          alt=""
+          alt={`${project.name} project`}
         />
       </article>
         <div className="z-10 mb-3 rounded-md p-2 font-poppins">
-          <h3 className="text-xl 2xl:text-2xl">{project.name}</h3>
+          <h3 className="text-lg 2xl:text-2xl">{project.name}</h3>
         </div>
     </a>
   )
