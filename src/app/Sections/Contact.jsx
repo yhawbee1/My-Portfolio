@@ -97,9 +97,9 @@ export default function Contact() {
     <>
       <section
         id="contact"
-        className="flex h-[100vh] flex-col items-center justify-center px-3 py-16 md:px-5"
+        className="flex lg:h-[100vh] flex-col items-center justify-center px-3 py-16 md:px-5"
       >
-        <div className="rounded-3xl bg-brianGreen px-6 py-12 text-start text-black lg:px-10">
+        <div className="rounded-3xl bg-brianGreen px-5 py-12 text-start text-black lg:py-8 lg:px-10">
           <div className="mb-6 space-y-3">
             <h1 className="w-full font-epilogue text-[50px] font-bold leading-[50px] md:text-[65px] lg:text-[96px] lg:leading-[75px]">
               Contact Me.

@@ -50,7 +50,7 @@ const Projects = () => {
           </h2>
           {/* <p className='font-poppins'>Projects That Define My Growth as a Developer</p> */}
         </div>
-        <div className="mt-4 grid w-full grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-4 grid w-full grid-cols-1 gap-2.5 lg:gap-4 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <Card key={index} project={project} />
           ))}

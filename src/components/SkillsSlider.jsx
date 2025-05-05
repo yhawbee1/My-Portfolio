@@ -34,7 +34,7 @@ const Card = ({ name, icon }) => {
 
 export default function SkillsSlider() {
   return (
-    <div className="relative flex h-[600px] w-full flex-col items-center justify-center space-y-3 overflow-hidden rounded-lg md:shadow-xl">
+    <div className="relative flex lg:h-[600px] w-full flex-col items-center justify-center space-y-3 overflow-hidden rounded-lg md:shadow-xl">
       <Marquee  className="[--duration:20s]">
         {firstRow.map((data) => (
           <Card name={data.name} key={data.name} icon={data.icon} />

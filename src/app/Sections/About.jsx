@@ -22,7 +22,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="container mx-auto flex min-h-[85vh] flex-col items-center justify-evenly overflow-y-auto py-10 xl:py-16"
+      className="container mx-auto flex min-h-[85vh] flex-col items-center justify-evenly py-10 xl:py-16"
     >
       <section className="flex flex-col-reverse items-center justify-between md:flex-row">
         <section className="w-full lg:w-[50%]">
@@ -30,7 +30,7 @@ const About = () => {
             About <span className="text-brianGreen">Me.</span>{' '}
           </h1>
           <p className="font-poppins">
-            I&apos;m a passionate front-end developer with {yearsOfExperience}{' '}
+            I&apos;m a passionate front-end developer with over {yearsOfExperience}{' '}
             years of experience at TechOne IT Services and Digital Solutions. I
             enjoy crafting user-friendly interfaces that are both visually
             appealing and performant. My expertise spans HTML, CSS, JavaScript,
@@ -39,7 +39,7 @@ const About = () => {
             Proficient in Figma, I collaborate seamlessly with design teams to
             ensure smooth transitions from concept to implementation.
           </p>
-          <button className="mt-3 rounded-full border border-brianGreen bg-transparent px-7 py-2 font-poppins text-brianGreen hover:bg-brianGreen hover:text-black">
+          <button className="w-full lg:w-fit mt-3 rounded-full border border-brianGreen bg-transparent px-7 py-2 font-poppins text-brianGreen hover:bg-brianGreen hover:text-black">
             Contact Me
           </button>
         </section>
@@ -49,29 +49,29 @@ const About = () => {
         </section>
       </section>
 
-      <section className="mt-10 grid w-full grid-cols-1 gap-4 divide-x border-x md:grid-cols-2 lg:grid-cols-4">
+      <section className="mt-10 grid w-full grid-cols-2 gap-4 lg:divide-x lg:border-x md:grid-cols-2 lg:grid-cols-4">
         <div className="py-3.5 text-center">
-          <h5 className="font-epilogue text-6xl font-bold">
+          <h5 className="font-epilogue text-4xl lg:text-6xl font-bold">
             {}
             <CountUp end={numberOfProjects} />+
           </h5>
           <p className="font-poppins text-gray-300">Projects</p>
         </div>
         <div className="py-3.5 text-center">
-          <h5 className="font-epilogue text-6xl font-bold">
+          <h5 className="font-epilogue text-4xl lg:text-6xl font-bold">
             <CountUp end={yearsOfExperience} />+
             {/* {yearsOfExperience} */}
           </h5>
           <p className="font-poppins text-gray-300">Years Of Experience</p>
         </div>
         <div className="py-3.5 text-center">
-          <h5 className="font-epilogue text-6xl font-bold">
+          <h5 className="font-epilogue text-4xl lg:text-6xl font-bold">
             <CountUp end={numberOfClients} />+
           </h5>
           <p className="font-poppins text-gray-300">Clients</p>
         </div>
         <div className="py-3.5 text-center">
-          <h5 className="font-epilogue text-6xl font-bold">
+          <h5 className="font-epilogue text-4xl lg:text-6xl font-bold">
             <CountUp end={numberOfHours} />
             k+
           </h5>

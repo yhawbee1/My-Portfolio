@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="border-t py-5 font-poppins text-sm text-gray-400">
-      <section className="container flex flex-col md:flex-row justify-between">
+      <section className="container flex flex-col gap-3 md:flex-row items-center md:justify-between">
         <p>
           © {new Date().getFullYear()} Brian Antwi. All rights reserved.
         </p>

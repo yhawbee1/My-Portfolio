@@ -13,21 +13,21 @@ const Header = () => {
   ]
 
   return (
-    <header className="sticky top-[9px] z-[50] flex justify-center">
-      <section className="absolute top-2  w-fit rounded-full border border-brianGreen/20 bg-black/40 px-10 py-3.5 backdrop-blur-md">
+    <header className="sticky top-[9px] z-[50] mx-1 flex justify-center">
+      <section className="absolute top-2 w-full rounded-full border border-brianGreen/20 bg-black/40 px-5 py-1.5 backdrop-blur-md lg:w-fit lg:px-10 lg:py-3.5">
         <nav className="flex w-full items-center justify-between lg:justify-around">
           {/* Logo */}
-          {/* <Link href={'/'} className="relative size-16 max-[320px]:size-14">
-          <Image src="/logo.png" fill alt="Logo" priority />
-        </Link> */}
+          <Link href={'/'} className="relative size-10 lg:hidden">
+            <Image src="/logo.png" fill alt="Logo" priority />
+          </Link>
 
           {/* Mobile Nav */}
-          {/* <span className="block lg:hidden">
-          <Sidebar links={navLinks} />
-        </span> */}
+          <span className="block lg:hidden">
+            <Sidebar links={navLinks} />
+          </span>
 
           {/* Navigation links */}
-          <ul className="hidden items-center justify-center gap-10 lg:flex ">
+          <ul className="hidden items-center justify-center gap-10 lg:flex">
             {navLinks.map((link, index) => (
               <Link href={link.Link} key={index}>
                 <li
