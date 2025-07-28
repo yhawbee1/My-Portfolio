@@ -15,7 +15,7 @@ const Sidebar = ({ links }) => {
   return (
     <section className="w-[80%]">
       <Sheet className="">
-        <SheetTrigger className="relative size-20 text-white max-[320px]:size-16">
+        <SheetTrigger className="relative size-10 text-white">
           <Image
             src="/menu.svg"
             fill
@@ -29,7 +29,7 @@ const Sidebar = ({ links }) => {
               <Link href={link.Link} className="w-full" key={id}>
                 <SheetClose>
                   <li
-                    className={`${activeLink === link.Link ? "text-brianGreen underline underline-offset-4" : ""} text-bold w-100 text-balance text-end font-poppins text-3xl font-semibold uppercase transition-all hover:text-brianGreen hover:underline md:text-4xl`}
+                    className={`"text-brianGreen underline underline-offset-4 text-bold w-100 text-balance text-end font-poppins text-3xl font-semibold uppercase transition-all hover:text-brianGreen hover:underline md:text-4xl`}
                   >
                     {link.Title}
                   </li>
